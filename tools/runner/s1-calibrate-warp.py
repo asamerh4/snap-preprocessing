@@ -43,24 +43,20 @@ def projectSelectedBands():
         #TODO: exception handling (check_call)
     print snapCall
     call(snapCall, shell=True)
-
-    for file in os.listdir(output_path):
-        if file.endswith(".tif"):
-            warpInputFileList.append(file)
-    return warpInputFileList
+    
+    return output_path+"/"+InputProduct
 
 
 def WarpToUTM(warpInputFileList):
-    for inFile in warpInputFileList:
-        warp = '''gdalwarp -overwrite -tr 100 100 \
+    warp = '''gdalwarp -overwrite -tr 100 100 \
               -t_srs "EPSG:32633" \
               {inFile} \
               {outFile}'''.format(
-                inFile=output_path+"/"+InputProduct+".calib.tif",
-                outFile=output_path+"/"+inFile+".calib-utm.tif"
+                inFile=warpInputFileList+".calib.tif",
+                outFile=warpInputFileList+".calib-utm.tif"
                 )
-        #TODO: exception handling (check_call)
-        call(warp, shell=True)
+    #TODO: exception handling (check_call)
+    call(warp, shell=True)
 
 # def syncToS3AndRegister(tiles, productInfo):
     # s3UploadCall='''aws --endpoint-url https://obs.eu-de.otc.t-systems.com \
