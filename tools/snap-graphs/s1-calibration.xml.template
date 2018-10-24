@@ -4,7 +4,7 @@
     <operator>Read</operator>
     <sources/>
     <parameters class="com.bc.ceres.binding.dom.XppDomElement">
-      <file>/root/input/S1A_IW_GRDH_1SDV_20180807T165207_20180807T165232_023143_02838C_198F.zip</file>
+      <file>{manifest}</file>
       <formatName>SENTINEL-1</formatName>
     </parameters>
   </node>

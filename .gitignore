@@ -1,1 +1,2 @@
-tools/snap-bundle
+*.jar
+*.so
