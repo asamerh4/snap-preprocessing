@@ -117,3 +117,8 @@ ll
 - create NDVI-min & max grids by using all S2-products
 - use calibrated S1-products & sigma diff-grid and combine S2&S1 (ref is: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5621168/)
 
+### results viz
+![alt text](img/S1A_IW_GRDH_1SDV_20180807T165207_20180807T165232_023143_02838C_198F.zip.calib-utm.jpg "sigma_0@20180807T165207")
+->
+![alt text](img/S1B_IW_GRDH_1SDV_20180911T165935_20180911T170000_012670_017612_7BAC.zip.calib-utm.jpg "sigma_0@20180911T165935")
+
